@@ -1,0 +1,33 @@
+% !TEX program = xelatex
+\documentclass[a4paper, 12pt]{report}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2, AutoFakeSlant=0.2]{標楷體}
+\setCJKmonofont[AutoFakeBold=2, AutoFakeSlant=0.2]{SimSun}
+\setmainfont{Times New Roman}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\renewcommand\contentsname{目錄}
+\renewcommand\bibname{參考資料}
+\renewcommand\figurename{圖}
+\renewcommand\tablename{表}
+\renewcommand\chaptername{第}
+\renewcommand\thechapter{\arabic{chapter}章}
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\makeatletter
+\renewcommand*{\l@chapter}[2]{\@dottedtocline{0}{0em}{3em}{#1}{#2}}
+\renewcommand*{\l@section}[2]{\@dottedtocline{1}{1.5em}{3em}{#1}{#2}}
+\renewcommand*{\l@subsection}[2]{\@dottedtocline{2}{3.8em}{4em}{#1}{#2}}
+\makeatother
+
+\title{從 TeX 到 LaTeX：理解數位排版的起點}
+\author{LaTeX 教學講義}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{chap1/chap1.tex}
+\end{document}

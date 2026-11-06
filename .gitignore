@@ -1,0 +1,15 @@
+# LaTeX auxiliary and build files
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# Generated PDF output
+*.pdf
